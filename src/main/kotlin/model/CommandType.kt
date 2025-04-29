@@ -9,7 +9,7 @@ enum class CommandType(val command: String) {
     ;
     companion object {
         fun fromCommand(command: String): CommandType {
-            return values().find { it.command.equals(command, ignoreCase = true) } ?: NONE
+            return CommandType.entries.find { it.command.equals(command, ignoreCase = true) } ?: NONE
         }
     }
 }
